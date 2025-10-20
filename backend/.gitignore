@@ -1,0 +1,53 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+build/
+dist/
+wheels/
+*.egg-info/
+.egg-info/
+*.egg
+*.whl
+
+# Virtual environment
+.venv/
+.env/
+.venv
+.env
+venv/
+ENV/
+env/
+*.venv
+
+# Tests / coverage
+htmlcov/
+.coverage
+.coverage.*
+.cache
+.noseids
+.pytest_cache/
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# IDE / editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Lock files
+uv.lock

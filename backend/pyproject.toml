@@ -1,0 +1,16 @@
+[project]
+name = "backend"
+version = "0.1.0"
+description = "A web application that allows users to input text and get the sentiment (positive, negative, neutral) of the text."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi[standard]>=0.119.1",
+    "psycopg2-binary>=2.9.11",
+    "pydantic>=2.12.3",
+    "python-dotenv>=1.1.1",
+    "python-multipart>=0.0.20",
+    "torch>=2.9.0",
+    "transformers>=4.57.1",
+    "uvicorn>=0.38.0",
+]

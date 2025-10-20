@@ -1,0 +1,8 @@
+fastapi[standard]
+psycopg2-binary
+pydantic
+python-multipart
+python-dotenv
+torch
+transformers
+uvicorn
