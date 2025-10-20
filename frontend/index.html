@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sentiment Analysis</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Sentiment Analyzer</h1>
+      <p class="subtitle">Real time AI-powered text sentiment analysis</p>
+    </header>
+
+    <div class="history-sidebar" id="historySidebar">
+      <div class="history-header">
+        <h3>Analysis History</h3>
+        <div>
+          <button class="clear-history" id="clearHistory">Clear All</button>
+
+          <button class="close-sidebar" id="closeSidebar">X</button>
+        </div>
+      </div>
+      <div class="history-list" id="historyList">
+        <div class="empty-history">No analysis history yet</div>
+      </div>
+    </div>
+
+    <button class="sidebar-toggle" id="sidebarToggle">History</button>
+
+    <div class="input-container" id="inputSection">
+      <!-- <label for="input-text" class="sr-only">Enter text to analyze</label> -->
+      <textarea
+        id="input-text"
+        placeholder="Type your text here to analyze..."
+        rows="5"
+      ></textarea>
+      <div class="error-message" id="errorMessage">
+        Please enter some text to analyze
+      </div>
+      <button type="button" id="analyze">Analyze</button>
+      <!-- <div id="loading" class="hidden">Analyzing...</div> -->
+    </div>
+
+    <div class="output-container hidden" id="resultsSection">
+      <h3>Results</h3>
+
+      <!-- Main Sentiment Display -->
+      <div class="sentiment-main">
+        <span class="sentiment-label" id="sentimentLabel">Negative</span>
+        <!-- <span class="sentiment-emoji" id="sentimentEmoji">😊</span> -->
+      </div>
+
+      <!-- Confidence Bar -->
+      <div class="confidence-section">
+        <div class="confidence-header">
+          <span>Confidence: </span>
+          <span id="confidencePercent">92%</span>
+        </div>
+        <div class="confidence-bar">
+          <div class="confidence-fill" id="confidenceFill"></div>
+        </div>
+      </div>
+
+      <!-- Detailed Scores -->
+      <div class="detailed-scores">
+        <h4>Detailed Breakdown</h4>
+        <div class="score-row">
+          <span class="score-label positive">Positive</span>
+          <span class="score-value" id="positiveScore">92%</span>
+        </div>
+        <div class="score-row">
+          <span class="score-label negative">Negative</span>
+          <span class="score-value" id="negativeScore">8%</span>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="action-buttons">
+        <button class="btn-secondary" id="analyzeAnother">
+          Analyze Another
+        </button>
+      </div>
+    </div>
+
+    <div id="loading" class="hidden">
+      <div class="spinner"></div>
+      <span>Analyzing text...</span>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
